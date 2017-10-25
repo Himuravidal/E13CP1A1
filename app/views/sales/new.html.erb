@@ -1,0 +1,21 @@
+<h1>Ingreso de ventas</h1>
+<%= form_with model: @sale, url: sales_path, local: true do |f| %>
+
+<%= f.label :details, "Detalles de la venta" %>
+<%= f.text_area :details %>
+
+<%= f.label :category, "Category" %>
+<%= f.select :category, options_for_select([["Uno", "1"], ["Dos", "2"], ["Tres", "3"], ["Cuatro", "4"], ["Cinco", "5"]]) %><br><br>
+
+
+<%= f.label :value, "Valor" %>
+<%= f.number_field :value %>
+
+<%= f.label :discount, "Descuento" %>
+<%= f.number_field :discount %>
+
+<%= f.label :tax, "Exento de IVA" %>
+<%= f.check_box :tax %>
+
+<%= f.submit "Enviar" %>
+<% end %>
