@@ -1,8 +1,8 @@
 <h1>Ingreso de ventas</h1>
 <%= form_with model: @sale, url: sales_path, local: true do |f| %>
 
-<%= f.label :details, "Detalles de la venta" %>
-<%= f.text_area :details %>
+<%= label_tag "Detalles de la venta" %>
+<%= f.text_area :detail %>
 
 <%= f.label :category, "Category" %>
 <%= f.select :category, options_for_select([["Uno", "1"], ["Dos", "2"], ["Tres", "3"], ["Cuatro", "4"], ["Cinco", "5"]]) %><br><br>
